@@ -9,9 +9,14 @@ def home():
 @app.route('/project')
 def project():
     return render_template('project.html')
+# @app.route('/style')
+# def style():
+#     return render_template('style.css')
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+    
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
