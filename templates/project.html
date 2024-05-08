@@ -8,7 +8,7 @@
 <body>
     <h2>Our Bike Project</h2>
     <!-- kms_driven,age,brand,owner,power -->
-<form action="">
+<form action="{{ url_for('predict') }}" method="post">
 <label for="">brand</label>
         <select name="brand_name" id="fifth" required="required">
             <option value="Royal Enfield" >Royal Enfield</option>
@@ -26,28 +26,37 @@
             <option value="Triumph">Triumph</option>
             <option value="Ducati">Ducati</option>
             <option value="BMW">BMW</option>
+            <option value="Rajdoot">Rajdoot</option>
+            <option value="Indian">Indian</option>
+            <option value="LML">LML</option>
+            <option value="Yezdi">Yezdi</option>
+            <option value="MV">MV</option>
+            <option value="Ideal">Ideal</option>
         </select><br><br>
 <label for="">owner</label>
 
 <select name="owner" id="">
-    <option value="first owner">first owner</option>
-    <option value="second owner">second owner</option>
-    <option value="third owner">third owner</option>
-    <option value="fourth owner">fourth owner</option>
+    <option value="1">first owner</option>
+    <option value="2">second owner</option>
+    <option value="3">third owner</option>
+    <option value="4">fourth owner</option>
 
 </select><br><br>
+
 <label for="">age</label>
-<input type="age"required>
+<input type="text" name="age" required>
 <br><br>
+
 <label for="">power</label>
-<input type="power"required>
+<input type="text" name="power" required>
 <br><br>
 <label for="">kms_driven</label>
-<input type="kms_driven"required>
+<input type="text" name ="kms_driven"required>
 <br><br>
 <button type="submit">submit</button>
 
     </form>
-    
+    <br><br>
+    <h2>Your Prediction is : {{ prediction }}</h2>
 </body>
 </html>
