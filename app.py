@@ -1,5 +1,36 @@
 from flask import Flask , render_template,url_for,request # class flask in flask with function 
 import joblib
+import mysql.connector
+mydb = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="1234",
+    database="bike_price"
+)
+if mydb.is_connected():
+    print('you are connected')
+else:
+    print('sorry unable to connect')
+    mycur = mydb.cursor()
+# query = "create table student (stud_id int, student_name varchar(25),student_class varchar(10))"
+query2 = "INSERT INTO users values(%s,%s,%s,%s,%s)"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 model =joblib.load("model.lb")
 app = Flask(__name__)
 
