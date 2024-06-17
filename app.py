@@ -23,7 +23,7 @@ conn = mysql.connector.connect(
 
 )
 if conn.is_connected():
-    print("connection is established ")
+    print("hm connect ho chuke ")
 else:
     print("not conn")    
 
